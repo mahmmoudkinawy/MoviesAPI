@@ -62,8 +62,6 @@ public class GenresController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> DeleteGenre([FromRoute] Guid id)
     {
-        if (id == null) return BadRequest();
-
         var genreFromDb = await _genreRepository.GetFirstOrDefaultAsync(g => g.Id == id);
 
         if (genreFromDb == null) return NotFound();

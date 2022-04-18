@@ -8,3 +8,6 @@ global using Microsoft.AspNetCore.Mvc;
 global using MoviesAPI.Repositories;
 global using AutoMapper;
 global using MoviesAPI.DTOs;
+global using System.Net;
+global using System.Text.Json;
+global using MoviesAPI.Middleware;

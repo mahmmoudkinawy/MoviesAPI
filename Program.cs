@@ -17,11 +17,11 @@ builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseSwagger();
+
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
