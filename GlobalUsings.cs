@@ -6,3 +6,5 @@ global using MoviesAPI.Interfaces;
 global using System.Linq.Expressions;
 global using Microsoft.AspNetCore.Mvc;
 global using MoviesAPI.Repositories;
+global using AutoMapper;
+global using MoviesAPI.DTOs;
